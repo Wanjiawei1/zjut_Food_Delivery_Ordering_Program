@@ -20,9 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 员工管理
- */
+//员工管理
 @RestController
 @RequestMapping("/admin/employee")
 @Slf4j
@@ -34,12 +32,7 @@ public class EmployeeController {
     @Autowired
     private JwtProperties jwtProperties;
 
-    /**
-     * 登录
-     *
-     * @param employeeLoginDTO
-     * @return
-     */
+    //登录
     @ApiOperation("员工登录")
     @PostMapping("/login")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
@@ -65,17 +58,13 @@ public class EmployeeController {
         return Result.success(employeeLoginVO);
     }
 
-    /**
-     * 退出
-     *
-     * @return
-     */
+    //员工登出
     @ApiOperation("员工登出")
     @PostMapping("/logout")
     public Result<String> logout() {
         return Result.success();
     }
-
+    //新增员工
     @PostMapping
     @ApiOperation("新增员工")
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
@@ -84,7 +73,7 @@ public class EmployeeController {
 
         return Result.success();
     }
-
+    //员工分页查询
     @GetMapping("/page")
     @ApiOperation("员工分页查询")
     public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO) {
@@ -94,4 +83,15 @@ public class EmployeeController {
 
         return Result.success(pageResult);
         }
+    //启用禁用员工
+
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用禁用员工账号")
+    public Result startorstop(@PathVariable Integer status,long id){
+        log.info("启用禁用员工账号:{},{}",status,id);
+        employeeService.startorstop(status,id);
+        return Result.success();
+    }
+
+
     }
