@@ -9,5 +9,5 @@ sky:
   alioss:
     endpoint: oss-cn-hangzhou.aliyuncs.com
     access-key-id: LTAI5tK3Scidzz7QCK7avV1S
-    access-key-secret: QlV6awSMlAOb40aFD0cDaaULPIkmbu
+    access-key-secret:
     bucket-name: wjw-develop
