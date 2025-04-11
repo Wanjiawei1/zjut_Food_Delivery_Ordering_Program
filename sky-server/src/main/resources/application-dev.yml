@@ -8,6 +8,6 @@ sky:
     password: 1234
   alioss:
     endpoint: oss-cn-hangzhou.aliyuncs.com
-    access-key-id: LTAI5tK3Scidzz7QCK7avV1S
-    access-key-secret:
+    access-key-id: LTAI5tCHT1c9j8EdNdHGks4P
+    access-key-secret: MajipadiJmOT76JsQZc6D9q9a9R1kQ
     bucket-name: wjw-develop
