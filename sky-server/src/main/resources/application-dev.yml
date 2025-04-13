@@ -7,7 +7,13 @@ sky:
     username: root
     password: 1234
   alioss:
-    endpoint:1
-    access-key-id:1
-    access-key-secret:1
-    bucket-name:1
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    access-key-id:
+    access-key-secret:
+    bucket-name: wjw-develop
+  redis:
+    host: localhost
+    port: 6379
+    password: "1234"
+    database: 0
+
