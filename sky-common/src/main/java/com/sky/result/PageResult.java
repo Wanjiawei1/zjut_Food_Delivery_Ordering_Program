@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PageResult implements Serializable {
+public class PageResult<O extends com.sky.entity.Orders> implements Serializable {
 
     private long total; //总记录数
 

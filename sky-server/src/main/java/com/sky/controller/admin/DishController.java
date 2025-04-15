@@ -1,12 +1,10 @@
 package com.sky.controller.admin;
 
 
-import com.github.pagehelper.Page;
 import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
-import com.sky.entity.DishFlavor;
-import com.sky.mapper.DishFlavorMapper;
+import com.sky.entity.Orders;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.DishService;
@@ -52,10 +50,10 @@ public class DishController {
     //菜品分页查询操作
     @GetMapping("/page")
     @ApiOperation("菜品分页查询")
-    public Result<PageResult> page(DishPageQueryDTO dishPageQueryDTO) {
+    public Result<PageResult<Orders>> page(DishPageQueryDTO dishPageQueryDTO) {
         log.info("菜品分页查询:{}", dishPageQueryDTO);
 
-        PageResult pageResult= dishService.pageQuery(dishPageQueryDTO);
+        PageResult<Orders> pageResult= dishService.pageQuery(dishPageQueryDTO);
         return Result.success(pageResult);
     }
 

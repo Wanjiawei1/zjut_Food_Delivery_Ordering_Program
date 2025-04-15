@@ -3,6 +3,7 @@ package com.sky.service;
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.entity.Category;
+import com.sky.entity.Orders;
 import com.sky.result.PageResult;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface CategoryService {
      * @param categoryPageQueryDTO
      * @return
      */
-    PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+    PageResult<Orders> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
 
     /**
      * 根据id删除分类

@@ -2,6 +2,7 @@ package com.sky.service;
 
 import com.sky.dto.SetmealDTO;
 import com.sky.dto.SetmealPageQueryDTO;
+import com.sky.entity.Orders;
 import com.sky.entity.Setmeal;
 import com.sky.result.PageResult;
 import com.sky.vo.DishItemVO;
@@ -21,7 +22,7 @@ public interface SetmealService {
      * @param setmealPageQueryDTO
      * @return
      */
-    PageResult pageQuery(SetmealPageQueryDTO setmealPageQueryDTO);
+    PageResult<Orders> pageQuery(SetmealPageQueryDTO setmealPageQueryDTO);
 
     /**
      * 批量删除套餐

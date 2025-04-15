@@ -4,6 +4,7 @@ package com.sky.service;
 import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
+import com.sky.entity.Orders;
 import com.sky.result.PageResult;
 import com.sky.vo.DishVO;
 
@@ -16,7 +17,7 @@ public interface DishService {
     public void saveWithFlavor(DishDTO dishDTO);
 
     //菜品分页查询方法
-    PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
+    PageResult<Orders> pageQuery(DishPageQueryDTO dishPageQueryDTO);
 
     //批量删除菜品
     void deleteBatch(List<Long> ids);

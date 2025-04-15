@@ -5,6 +5,7 @@ import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.entity.Orders;
 import com.sky.properties.JwtProperties;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
@@ -76,10 +77,10 @@ public class EmployeeController {
     //员工分页查询
     @GetMapping("/page")
     @ApiOperation("员工分页查询")
-    public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO) {
+    public Result<PageResult<Orders>> page(EmployeePageQueryDTO employeePageQueryDTO) {
         log.info("员工分页查询数据{}", employeePageQueryDTO);
         EmployeeService PageResultemployeeService;
-        PageResult pageResult= employeeService.pageQuery(employeePageQueryDTO);
+        PageResult<Orders> pageResult= employeeService.pageQuery(employeePageQueryDTO);
 
         return Result.success(pageResult);
         }
